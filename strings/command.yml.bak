@@ -79,7 +79,7 @@ GETVAR_COMMAND : ["get_var", "ج ف"]
 DELVAR_COMMAND : ["del_var", "ح ف"]
 SETVAR_COMMAND : ["set_var", "ا ف"]
 USAGE_COMMAND : ["usage", "ا س"]
-VARS_COMMAND : ["كنفجات", "config"]
+VARS_COMMAND : ["vars", "config"]
 
 
 #Basic Bot Commands
