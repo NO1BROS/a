@@ -11,13 +11,13 @@ import os
 from random import randint
 
 from pykeyboard import InlineKeyboard
+from YukkiMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import get_command
-from strings.filters import command
 from YukkiMusic import Carbon, YouTube, app
 from YukkiMusic.utils.database import (delete_playlist, get_playlist,
                                        get_playlist_names,

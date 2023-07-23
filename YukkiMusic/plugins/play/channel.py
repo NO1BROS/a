@@ -7,12 +7,12 @@
 #
 # All rights reserved.
 
+from YukkiMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from strings.filters import command
 from YukkiMusic import app
 from YukkiMusic.utils.database import set_cmode
 from YukkiMusic.utils.decorators.admins import AdminActual
@@ -22,11 +22,11 @@ CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
 
 
 @app.on_message(
-     command(CHANNELPLAY_COMMAND)
-     & filters.group
-     & ~filters.edited
-     & ~BANNED_USERS
- )
+    command(CHANNELPLAY_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
 @AdminActual
 async def playmode_(client, message: Message, _):
     if len(message.command) < 2:
